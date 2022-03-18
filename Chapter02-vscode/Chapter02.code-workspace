@@ -5,6 +5,12 @@
 		},
 		{
 			"path": "Variables"
+		},
+		{
+			"path": "Formatting"
+		},
+		{
+			"path": "Arguments"
 		}
 	]
 }
