@@ -3,6 +3,7 @@ using static System.Console;
 Person bob = new();
 bob.Name = "Bob Smith";
 bob.DateOfBirth = new DateTime(1965, 2, 1);
+bob.FavoriteAncientWonder = WondersOfTheAncientWorld.StatueOfZeusAtOlympia;
 bob.BucketList = WondersOfTheAncientWorld.HangingGardensOfBabylon
   | WondersOfTheAncientWorld.MausoleumAtHalicarnassus;
 bob.Children.Add(new Person { Name = "Alfred" });
@@ -58,3 +59,24 @@ WriteLine(format:
   arg1: gunny.HomePlanet,
   arg2: gunny.Instantiated
   );
+
+bob.WriteToConsole(); 
+WriteLine(bob.GetOrigin());
+
+(string, int) fruit = bob.GetFruit();
+WriteLine($"{fruit.Item1}, {fruit.Item2} there are.");
+
+var thing1 = ("Neville", 4);
+WriteLine($"{thing1.Item1} has {thing1.Item2} children.");
+var thing2 = (bob.Name, bob.Children.Count); 
+WriteLine($"{thing2.Name} has {thing2.Count} children.");
+
+// Deconstructed tuple
+(string fruitName, int fruitNumber) = bob.GetFruit();
+WriteLine($"Deconstructed: {fruitName}, {fruitNumber}");
+
+// Deconstructing a Person
+var (name1, dob1) = bob;
+WriteLine($"Deconstructed: {name1}, {dob1}");
+var (name2, dob2, fav2) = bob;
+WriteLine($"Deconstructed: {name2}, {dob2}, {fav2}");
