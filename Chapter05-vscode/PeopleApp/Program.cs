@@ -85,3 +85,12 @@ WriteLine(bob.SayHello());
 WriteLine(bob.SayHelloTo("Emily"));
 WriteLine(bob.OptionalParameters());
 WriteLine(bob.OptionalParameters("Jump1", 98.5));
+WriteLine(bob.OptionalParameters(number: 52.7, command: "Hide!"));
+WriteLine(bob.OptionalParameters("Poke!", active: false));
+
+int a = 10; 
+int b = 20; 
+int c = 30;
+WriteLine($"Before: a = {a}, b = {b}, c = {c}"); 
+bob.PassingParameters(a, ref b, out c); 
+WriteLine($"After: a = {a}, b = {b}, c = {c}");
