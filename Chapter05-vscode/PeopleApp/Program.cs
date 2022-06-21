@@ -80,3 +80,8 @@ var (name1, dob1) = bob;
 WriteLine($"Deconstructed: {name1}, {dob1}");
 var (name2, dob2, fav2) = bob;
 WriteLine($"Deconstructed: {name2}, {dob2}, {fav2}");
+
+WriteLine(bob.SayHello()); 
+WriteLine(bob.SayHelloTo("Emily"));
+WriteLine(bob.OptionalParameters());
+WriteLine(bob.OptionalParameters("Jump1", 98.5));
