@@ -101,3 +101,17 @@ WriteLine($"Before: d = {d}, e = {e}, f doesn't exist yet!");
 // simplified C# 7.0 or later syntax for the out parameter 
 bob.PassingParameters(d, ref e, out int f); 
 WriteLine($"After: d = {d}, e = {e}, f = {f}");
+
+Person sam = new()
+{
+  Name = "Sam",
+  DateOfBirth = new(1972, 1, 27)
+};
+WriteLine(sam.Origin); 
+WriteLine(sam.Greeting); 
+WriteLine(sam.Age);
+
+sam.FavoriteIceCream = "Chocolate Fudge";
+WriteLine($"Sam's favorite ice-cream flavor is {sam.FavoriteIceCream}."); 
+sam.FavoritePrimaryColor = "Red";
+WriteLine($"Sam's favorite primary color is {sam.FavoritePrimaryColor}.");

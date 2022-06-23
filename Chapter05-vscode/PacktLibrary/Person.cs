@@ -3,7 +3,7 @@ using static System.Console;
 using System.Collections.Generic;
 namespace Packt.Shared
 {
-    public class Person
+    public partial class  Person
     {
         public Person()
         {
