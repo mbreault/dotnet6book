@@ -94,3 +94,10 @@ int c = 30;
 WriteLine($"Before: a = {a}, b = {b}, c = {c}"); 
 bob.PassingParameters(a, ref b, out c); 
 WriteLine($"After: a = {a}, b = {b}, c = {c}");
+
+int d = 10; 
+int e = 20;
+WriteLine($"Before: d = {d}, e = {e}, f doesn't exist yet!");
+// simplified C# 7.0 or later syntax for the out parameter 
+bob.PassingParameters(d, ref e, out int f); 
+WriteLine($"After: d = {d}, e = {e}, f = {f}");
