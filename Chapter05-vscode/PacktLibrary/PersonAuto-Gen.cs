@@ -2,6 +2,19 @@ namespace Packt.Shared
 {
     public partial class Person
     {
+        // indexers
+        public Person this[int index]
+        {
+            get
+            {
+                return Children[index]; // pass on to the List<T> indexer
+            }
+            set
+            {
+                Children[index] = value;
+            }
+        }
+
         public string Origin
         {
             get
@@ -16,6 +29,7 @@ namespace Packt.Shared
         private string favoritePrimaryColor;
         public string FavoritePrimaryColor
         {
+
             get
             {
                 return favoritePrimaryColor;
