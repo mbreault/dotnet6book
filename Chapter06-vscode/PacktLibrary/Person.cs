@@ -1,6 +1,6 @@
 ﻿namespace Packt.Shared;
 using static System.Console;
-public class Person : object
+public class Person : object, IComparable<Person>
 {
     // fields
     public string? Name;    // ? allows null
@@ -55,22 +55,28 @@ public class Person : object
     }
 
     // delegate field
-public event EventHandler? Shout;
-// data field
-public int AngerLevel;
-// method
-public void Poke()
-{
-  AngerLevel++;
-  if (AngerLevel >= 3)
-  {
-    // if something is listening...
-    if (Shout != null)
+    public event EventHandler? Shout;
+    // data field
+    public int AngerLevel;
+    // method
+    public void Poke()
     {
-      // ...then call the delegate
-      Shout(this, EventArgs.Empty);
+        AngerLevel++;
+        if (AngerLevel >= 3)
+        {
+            // if something is listening...
+            if (Shout != null)
+            {
+                // ...then call the delegate
+                Shout(this, EventArgs.Empty);
+            }
+        }
     }
-  }
-}
+
+    public int CompareTo(Person? other)
+    {
+        if (Name is null) return 0;
+        return Name.CompareTo(other?.Name);
+    }
 }
 
