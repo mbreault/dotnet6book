@@ -99,3 +99,11 @@ john.HireDate = new(year: 2014, month: 11, day: 23);
 WriteLine($"{john.Name} was hired on {john.HireDate:MM/dd/yy}");
 
 WriteLine(john.ToString());
+
+Employee aliceInEmployee = new()
+  { Name = "Alice", EmployeeCode = "AA123" };
+Person aliceInPerson = aliceInEmployee; 
+aliceInEmployee.WriteToConsole(); 
+aliceInPerson.WriteToConsole(); 
+WriteLine(aliceInEmployee.ToString()); 
+WriteLine(aliceInPerson.ToString());
