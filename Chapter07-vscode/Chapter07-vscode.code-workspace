@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "AssembliesAndNamespaces"
+		},
+		{
+			"path": "ControlSDK"
+		},
+		{
+			"path": "DotNetEverywhere"
+		}
+	],
+	"settings": {}
+}
