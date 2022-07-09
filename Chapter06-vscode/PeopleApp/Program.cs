@@ -82,8 +82,8 @@ foreach (Person p in people)
     WriteLine($"  {p.Name}");
 }
 
-DisplacementVector dv1 = new(3, 5); 
-DisplacementVector dv2 = new(-2, 7); 
+DisplacementVector dv1 = new(3, 5);
+DisplacementVector dv2 = new(-2, 7);
 DisplacementVector dv3 = dv1 + dv2;
 WriteLine($"({dv1.X}, {dv1.Y}) + ({dv2.X}, {dv2.Y}) = ({dv3.X}, {dv3.Y})");
 
@@ -95,15 +95,47 @@ Employee john = new()
 john.WriteToConsole();
 
 john.EmployeeCode = "JJ001";
-john.HireDate = new(year: 2014, month: 11, day: 23); 
+john.HireDate = new(year: 2014, month: 11, day: 23);
 WriteLine($"{john.Name} was hired on {john.HireDate:MM/dd/yy}");
 
 WriteLine(john.ToString());
 
 Employee aliceInEmployee = new()
-  { Name = "Alice", EmployeeCode = "AA123" };
-Person aliceInPerson = aliceInEmployee; 
-aliceInEmployee.WriteToConsole(); 
-aliceInPerson.WriteToConsole(); 
-WriteLine(aliceInEmployee.ToString()); 
+{ Name = "Alice", EmployeeCode = "AA123" };
+Person aliceInPerson = aliceInEmployee;
+aliceInEmployee.WriteToConsole();
+aliceInPerson.WriteToConsole();
+WriteLine(aliceInEmployee.ToString());
 WriteLine(aliceInPerson.ToString());
+
+if (aliceInPerson is Employee)
+{
+    Employee explicitAlice = (Employee)aliceInPerson;
+    WriteLine($"Employee {explicitAlice.ToString()}");
+}
+
+Employee? aliceAsEmployee = aliceInPerson as Employee;
+if (aliceAsEmployee != null)
+{
+    WriteLine($"{nameof(aliceInPerson)} AS an employee.");
+}
+
+try
+{
+    john.TimeTravel(new(year: 1999, month: 12, day: 31));
+    john.TimeTravel(new(year: 1950, month: 12, day: 31));
+}
+catch (PersonException ex)
+{
+    WriteLine(ex.Message);
+}
+
+string email1 = "pamela@test.com"; 
+string email2 = "ian&test.com";
+
+WriteLine("{0} is a valid e-mail address: {1}",
+  arg0: email1,
+  arg1: email1.IsValidEmail());
+WriteLine("{0} is a valid e-mail address: {1}", 
+  arg0: email2,
+  arg1: email2.IsValidEmail());
