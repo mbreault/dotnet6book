@@ -8,6 +8,9 @@
 		},
 		{
 			"path": "DotNetEverywhere"
+		},
+		{
+			"path": "SharedLibrary"
 		}
 	],
 	"settings": {}
