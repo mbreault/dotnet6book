@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "WorkingWithNumbers"
+		},
+		{
+			"path": "WorkingWithText"
 		}
 	]
 }
