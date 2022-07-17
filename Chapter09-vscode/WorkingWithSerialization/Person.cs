@@ -1,4 +1,5 @@
 namespace Packt.Shared;
+using System.Xml.Serialization;
 public class Person{
     public Person() { }
     public Person(decimal initialSalary){
@@ -9,7 +10,7 @@ public class Person{
     public string? FirstName { get; set; }
     [XmlAttribute("lname")]
     public string? LastName { get; set; }
-    public DateOnly DateOfBirth { get; set; }
+    public DateTime DateOfBirth { get; set; }
     public HashSet<Person>? Children { get; set; }
 }
 
