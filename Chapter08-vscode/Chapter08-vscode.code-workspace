@@ -23,6 +23,9 @@
 		},
 		{
 			"path": "WorkingWithReflection"
+		},
+		{
+			"path": "WorkingWithImages"
 		}
 	]
 }
