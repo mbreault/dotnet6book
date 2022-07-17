@@ -26,6 +26,9 @@
 		},
 		{
 			"path": "WorkingWithImages"
+		},
+		{
+			"path": "Internationalization"
 		}
 	]
 }
