@@ -17,6 +17,9 @@
 		},
 		{
 			"path": "WorkingWithRanges"
+		},
+		{
+			"path": "WorkingWithNetworkResources"
 		}
 	]
 }
