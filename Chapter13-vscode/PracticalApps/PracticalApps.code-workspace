@@ -8,6 +8,9 @@
 		},
 		{
 			"path": "Northwind.Web"
+		},
+		{
+			"path": "Northwind.Razor.Employees"
 		}
 	],
 	"settings": {}
