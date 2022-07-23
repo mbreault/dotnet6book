@@ -17,6 +17,15 @@
 		},
 		{
 			"path": "NestedAndChildTasks"
+		},
+		{
+			"path": "SynchronizingResourceAccess"
+		},
+		{
+			"path": "AsyncConsole"
+		},
+		{
+			"path": "WpfResponsive"
 		}
 	],
 	"settings": {}
