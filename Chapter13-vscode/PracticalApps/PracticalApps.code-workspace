@@ -11,6 +11,12 @@
 		},
 		{
 			"path": "Northwind.Razor.Employees"
+		},
+		{
+			"path": "Northwind.Mvc"
+		},
+		{
+			"path": "Northwind.WebApi"
 		}
 	],
 	"settings": {}
