@@ -20,6 +20,9 @@
 		},
 		{
 			"path": "Northwind.BlazorServer"
+		},
+		{
+			"path": "Northwind.BlazorWasm"
 		}
 	],
 	"settings": {}
